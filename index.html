@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Mirror Tutorial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <img class="circle" src="Circle.png" style="top: -10%; left: -10%; ">
+    <img class="circle" src="Circle.png" style="top: -10%; right: -10%; ">
+    <img class="circle" src="Circle.png" style="bottom: -10%; right: -10%; ">
+    <img class="circle" src="Circle.png" style="bottom: -10%; left: -10%; ">
+
+    <div class = "container">
+
+        <h1>Smart Mirror:</h1>
+
+        <h2>About:</h2>
+
+        <p>A Smart Mirror is a special mirror which could not only mirror you, but also display information such as today’s date, time, day, weather, and your schedule! Your schedule could be changed using an app on our smartphones. It accesses this data through the internet via Wi-Fi.</p>
+
+        <img src="Futuristic Smart Mirror Dashboard.png" alt="Futuristic Smart Mirror Dashboard" id = "img">
+
+        <h2>Usage:</h2>
+
+        <p>To use the Smart Mirror, simply stand in front of it and interact with the displayed information. You can view the time, date, weather, and your schedule. To update your schedule, use the accompanying app on your smartphone.</p>
+
+        <h2>Use Cases:</h2>
+
+        <ul>
+            <li>Home: A Smart Mirror can be used in homes to provide users with quick access to information while getting ready in the morning.</li>
+            <li>Offices: In office settings, Smart Mirrors can display important updates, meeting schedules, and notifications.</li>
+            <li>Retail: Retail stores can use Smart Mirrors to enhance the shopping experience by displaying product information and promotions.</li>
+        </ul>
+
+        <h2>Conclusion:</h2>
+
+        <p>In conclusion, a Smart Mirror is a versatile and innovative device that combines the functionality of a traditional mirror with the convenience of digital information display. It can enhance daily routines and provide valuable information at a glance.</p>
+
+        <h1>How To Make It:</h1>
+
+        <h2>Materials Required:</h2>
+
+        <ul>
+            <li><a href = "https://www.amazon.in/Robocraze-TIFDP0003-Robocraze16x2-LCD-blue/dp/B0D6YHL1HN/ref=sr_1_8_mod_primary_new?crid=1FWRSKX5X4APG&dib=eyJ2IjoiMSJ9.aPjsV6cezlHNo3pPFh-6KbFYvOKg-PIhJ4dZ3Cc15srnNNTxgEwyG1jA1KmgXZ9iG96swPjdCVAhbOxIhVs_tkzO8pJtZ1G6kHBqvExwPCKi4yYmGoQG6u6yyzp5sUGh7Ks03K9X4z5s1JX11mhfgvEBT6q8g8EH5pLUOXtfBsY0qb-F_KBFd8LFu8NuYwCuyC7GGDI3OHRVLSWe-4L5ALEhiwcYoAw22qUlh3jX8ctxpzBSjG7V1J6mJb8DIX6WHPUqAU0Bo8KQ8O1pjhorukDufZCMNkIFEMoGuyi-_e4.5HnuoPRUxMybtYqy0dyGPK_wq5vqT0k1B6W9Xehxsfc&dib_tag=se&keywords=16x2+lcd+display+without+i2c&qid=1795357797&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=16x2+lcd+display%2Caps%2C287&sr=8-8">LCD Display Module</a></li>
+            <li><a href = "https://amzn.in/d/0f1HOLUB">I2C Module</a></li>
+            <li><a href = "https://www.amazon.in/dp/B0HHD5HFB6?lv=shuf&smid=A3L7KL79EXZ8DB&psc=1&source=ps-sl-shoppingads-lpcontext&utm_source=chatgpt.com&channelId=480&ref_=fplfs&plpRedirect=mhFallback">OLED Display Moodule</a></li>
+            <li><a href = "https://www.amazon.in/Themisto-TH-B400-Breadboard-400-Points/dp/B0CGJ4ZBTC/ref=sr_1_9?crid=32UO4Y6LJTU4C&dib=eyJ2IjoiMSJ9.6ZUm6leB4UI7aWBkYJp9-xMhcfcMBF2JxRTK6rJioEg0vnXs5B9En0qHb65xItONC7F5PhUllHvTfg2ZfncOHtFojKuJMcik0D2mddhxbYDXIcrGSXqT23Zev2DOzWtIEWtzqDgE9KfE16Yp0nJ_S9mlKOCUsCXOHdW8tOxylzphrNvQodBblNy_Hpx2vcxstpxh6TBrYlDoQBUQJICrveZ_LQWHPHdbCdO5551AH1XK_1yof06DNgG4wzNBVZrhwPWMxBdQU4umXw7hLK8YQq3Y0rpxdiQajOBq8lLZUbs.YIMJ5H9ZHEedgzSjnPQb3rLyF9TFP9nclCrfVJ_Rw1s&dib_tag=se&keywords=breadboard%2Band%2Bjumper%2Bwires&qid=1795358704&sprefix=bread%2Caps%2C274&sr=8-9&th=1">Half-Sized Breadboard</a></li>
+            <li><a href = "https://www.amazon.in/Tishvi-Jumper-120pcs-Multicolored-Dupont/dp/B0G4GXTVLG/ref=sxin_13_pa_sp_search_thematic_sspa?content-id=amzn1.sym.6e35d58e-d276-4d9c-918a-3d084949b530%3Aamzn1.sym.6e35d58e-d276-4d9c-918a-3d084949b530&crid=M98TRV219S5D&cv_ct_cx=jumper%2Bwires&keywords=jumper%2Bwires&pd_rd_i=B0G4GXTVLG&pd_rd_r=aec5b2fd-6aff-43c8-b6ea-8df78addfa36&pd_rd_w=WMi93&pd_rd_wg=AApZD&pf_rd_p=6e35d58e-d276-4d9c-918a-3d084949b530&pf_rd_r=WPEVAW1NT0F8A5TS2RHP&qid=1795358833&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=Jumper%2Caps%2C311&sr=1-3-66673dcf-083f-43ba-b782-d4a436cc5cfb-spons&aref=vBTs53fbjz&sp_csd=d2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM&th=1">Jumper Wires</a></li>
+            <li><a href = "https://amzn.in/d/04gzIAnN">Arduino Uno Rev4 Wifi</a></li>
+            <li><a href = "https://amzn.in/d/0hmsNLA8">9V 1A Barrel Jack Power Supply</a></li>
+        </ul>
+
+        <h2>Wiring:</h2>
+
+        <p>Step 1: Connect the LCD Display Module to the I2C Module.</p>
+        <img src = "https://images.openai.com/static-rsc-4/LRGUD8vHTd4uSEKcm-zke0zYubG1aMfiRZIDvSHwX4SrExI2WLpXEVBc9YqWdkxBSFsj6vVLZpNy0QySmNq1rU-O8IE4SI_JZZ0kio4ZoIQ_ZkGHqLZLnVgQjbSXbgEa3OIRP8hjWnsT7xf8XQOpyaolRt5e-an9AraofHFhfItlbgM2_UsEJ0WReiXAP58_?purpose=fullsize" id = "img" alt = "Wiring Step 1">
+        <p>Step 2: Connect the I2C Module to the Arduino Uno Rev4 Wifi.</p>
+        <img src = "Arduino UNO R4 WiFi LCD Wiring Guide.png" id = "img" alt = "Wiring Step 2">
+        <p>Step 3: Connect the OLED Display Module to the Arduino Uno Rev4 Wifi. Please note that the given illustration is not the correct way to wire the components. Refer a <a href = "https://youtube.com/shorts/Bfg58rrL5ws?si=kKI87U8mFBj5gdvf">video on how a breadboard works</a>. Connect all the SCL and SDA pins together using the breadboard. This includes the microcontroller, I2C Module, and OLED Display Module.</p>
+        <img src = "Arduino UNO R4 Smart Mirror Wiring Diagram.png" id = "img" alt = "Wiring Step 3">
+        <p>Step 4: Note that to upload code, you have to connect the Arduino to your computer via respective USB cable, <a href = "https://www.arduino.cc/en/software">Download</a> the software which is used to upload the code.</p>
+        <p>Step 5: <a href = "Smart_Mirror.ino" download>Download the code</a></p>
+        <p>Step 6: The app we use here is called <a href = "https://blynk.cloud/">Blynk</a>. If in mobile, download the app from Google Play Store or App Store.</p>
+        <p>Step 7: Set up your account on the Blynk app. From there, navigate to the "Developer Zone" tab. Search for the "New Template" button and create a new template.</p>
+        <img src = "Step7.PNG" id = "img" alt = "Step 7">
+        <p>Step 8: Change the settings as:</p>
+        <ul>
+            <li>Template Name: Smart Mirror</li>
+            <li>Template Description: A Smart Mirror that displays time, date, weather, and schedule.</li>
+            <li>Device Type: Arduino</li>
+            <li>Connection Type: Wi-Fi</li>
+        </ul>
+        <img src = "Step8.PNG" id = "img" alt = "Step 8">
+        <p>Step 9: Click 'Set up Datastreams'. Find the "+ Create New" option and create a new datastream. Name the datastream as "Schedule". And fill in rest of the details as shown below and click "Save": </p>
+        <img src = "Step9.PNG" id = "img" alt = "Step 9">
+        <img src = "Step9A.PNG" id = "img" alt = "Step 9A">
+        <p>IMPORTANT: Make sure to select the datatype as string and Virtual pin as V0</p>
+        <p>Step 10: Click save near the top right corner of the page. Navigate to the "Devices" tab and add a new device. Click the From Template option. Choose the "Smart Mirror" template and name the device as "Smart Mirror" and click create.</p>
+        <img src = "Step10.PNG" id = "img" alt = "Step 10">
+        <p>Step 11: Copy the Information notified on the page.</p>
+        <img src = "Step11.PNG" id = "img" alt = "Step 11">
+        <p>Step 12: Open the downloaded .ino file in the Arduino IDE.</p>
+        <img src = "Step12.PNG" id = "imgt" alt = "Step 12">
+        <p>Step 13: Paste the copied information and replace this:</p>
+        <img src = "Step13.PNG" id = "imgt" alt = "Step 13">
+        <p>Step 14: Enter your Wi-Fi credentials, your longitude and latitude, and Time Zone in seconds. Note, the Wi-Fi credentials should be entered in the format: "SSID:PASSWORD". The Wi-Fi band should be 2.4 GHz.</p>
+        <img src = "Step14.PNG" id = "imgt" alt = "Step 14">
+        <p>Step 15: Click on edit dashboard option.</p>
+        <img src = "Step15.PNG" id = "imgt" alt = "Step 15">
+        <p>Step 16: Click on the "Add Widget" option.</p>
+        <img src = "Step16.PNG" id = "imgt" alt = "Step 16">
+        <p>Step 17: Click on the "Text Input" option which would add a text input widget to the dashboard.</p>
+        <img src = "Step17.PNG" id = "imgt" alt = "Step 17">
+        <p>Step 18: Click on the text input widget and change the settings as:</p>
+        <img src = "Step18.PNG" id = "imgt" alt = "Step 18">
+        <p>Step 19: Click on the "Save" option. And click on the "Save and Apply" option.</p>
+        <img src = "Step19.PNG" id = "imgt" alt = "Step 19">
+        <p>Step 20: Your Smart Mirror is now set up and ready to use! Now plug the jack into the Arduino.</p>
+    </div>
+    
+</body>
+</html>
