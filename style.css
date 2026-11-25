@@ -68,6 +68,21 @@ ul {
     max-width: 600px;
 }
 
+section {
+    color: white;
+    text-shadow: 0.1rem 0.1rem 0.1rem black;
+    font-family: "BlackadderITC", cursive;
+    font-style: italic;
+    font-size: 2.4rem;
+}
+
+@font-face {
+    font-family: "BlackadderITC";
+    src: url("ITCBLKAD.TTF") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
 @keyframes rotate {
     0%{
         transform: rotate(0deg);
